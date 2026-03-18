@@ -1,0 +1,98 @@
+## Overview
+
+CineWatch is a fast, single-page application (SPA) designed to provide a seamless movie browsing experience. It features a dark-mode cinematic interface, smooth transitions, and full mobile responsiveness.
+
+## Key Features
+- **User Authentication**: Mock login/registration system with session persistence (LocalStorage).
+- **Movie Search**: Real-time search functionality powered by The Movie Database (TMDB) API.
+- **Detailed Views**: Dedicated pages for movies showing poster, plot, ratings, and genres.
+- **Personal Watchlist**: Users can add/remove movies to a watchlist that persists per user account.
+- **Responsive Design**: Optimized for mobile, tablet, and desktop viewing.
+
+---
+
+## Tech Stack
+
+- **Frontend**: React.js (Vite)
+- **Routing**: React Router DOM v6
+- **Styling**: Tailwind CSS
+- **Icons**: React Icons
+- **API**: `https://api.themoviedb.org/3`
+- **State Management**: React Context API
+
+---
+
+## Getting Started
+
+Follow these instructions to get a copy of the project up and running on your local machine.
+
+### Prerequisites
+
+- Node.js (v14 or higher) installed.
+- A free TMDB API Key. 
+
+## Installation
+
+1. **Clone the repository**
+   ```
+   git clone https://github.com/mhasansagor/cinewatch.git
+   cd cinewatch
+   ```
+
+2. **Install dependencies**
+   ```
+   npm install
+   ```
+
+3. **Set up Environment Variables**
+   
+   Create a `.env` file in the root directory of the project:
+   ```
+   VITE_TMDB_API_KEY=443f2bcc4f5c010b33563b46bc9e71c8
+   ```
+
+4. **Run the development server**
+   ```
+   npm run dev
+   ```
+
+5. **Open in Browser**
+   
+   Navigate to `http://localhost:3000`(or the URL shown in your terminal).
+
+---
+
+## Usage Guide
+
+## 1. Authentication
+- Upon loading, you will see the **Search** page.
+- Click **Login** in the top right corner.
+- You can **Register** a new fake account (use any email/password format). 
+- **Note: This is a mock system. Passwords are stored in plaintext in LocalStorage for demonstration purposes only. Do not use real credentials.**
+
+## 2. Searching Movies
+- Use the search bar on the home page to type a movie title (e.g. "Batman").
+- Results will appear in a responsive grid.
+- Click the **+** icon on a card to add it to your watchlist (requires login).
+
+## 3. Viewing Details
+- Click on a movie card or the poster to view full details.
+- See the plot, release date, rating, and genres.
+- Use the "Add to Watchlist" button on the detail page to save the movie.
+
+## 4. Managing Watchlist
+- Click **Watchlist** in the navigation bar (only visible when logged in).
+- Remove movies by clicking the trash icon on the card.
+- Your watchlist is saved specifically to your logged-in account.
+
+---
+
+## Security Note
+
+This application uses a **mock authentication system** for demonstration purposes. User credentials are stored in the browser's `localStorage`. 
+
+## Design Highlights
+
+- **Dark Theme**: A cinematic dark mode using GitHub-inspired colors (`#0d1117`, `#161b22`).
+- **Micro-interactions**: Hover effects on cards, smooth transitions on buttons, and responsive scaling.
+- **Mobile-First**: The layout adapts from a 2-column grid on mobile to 5 columns on large screens.
